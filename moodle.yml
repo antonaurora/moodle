@@ -3,7 +3,13 @@ version: '3.8'
 services:
   moodle:
     image: bitnami/moodle:5.0.0-debian-12-r3
-
+    labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.conf.tls=true"
+        - "traefik.http.routers.conf.tls.certresolver=confresolver"
+        - "traefik.http.routers.conf.rule=Host(`conf.td-aurora.ru`)"
+        - "traefik.http.services.conf.loadbalancer.server.port=80"
+ 
     ports:
       - "8081:80"
     environment:
@@ -22,14 +28,13 @@ services:
     networks:
       - moodle_network
     deploy:
-      replicas: 2
+      replicas: 1
       restart_policy:
         condition: on-failure
       resources:
         limits:
           cpus: '0.5'
           memory: 512M
-
   moodle_db:
     image: mariadb:10.6
     environment:
