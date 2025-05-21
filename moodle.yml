@@ -25,7 +25,7 @@ services:
       MOODLE_SITE_NAME: My Moodle Site
       MOODLE_HOST: conf.td-aurora.ru
       MOODLE_REVERSEPROXY: true 
-      MOODLE_SSLPROXY: true
+      MOODLE_SSLPROXY: "true"
       MOODLE_LANG: ru
       
     volumes:
