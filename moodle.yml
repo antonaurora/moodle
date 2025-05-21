@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   moodle:
-    image: moodle:latest
+    image: moodle:5.0
     ports:
       - "8080:80"
     environment:
