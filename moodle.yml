@@ -23,6 +23,11 @@ services:
       MOODLE_PASSWORD: adminpassword
       MOODLE_EMAIL: anton@td-aurora.ru
       MOODLE_SITE_NAME: My Moodle Site
+      MOODLE_HOST: conf.td-aurora.ru
+      MOODLE_REVERSEPROXY: true 
+      MOODLE_SSLPROXY: true
+      MOODLE_LANG: ru
+      
     volumes:
       - moodle_data:/bitnami/moodle
     networks:
