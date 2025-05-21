@@ -5,7 +5,7 @@ services:
     image: bitnami/moodle:5.0.0-debian-12-r3
 
     ports:
-      - "8080:80"
+      - "8081:80"
     environment:
       MOODLE_DATABASE_TYPE: mariadb
       MOODLE_DATABASE_HOST: moodle_db
