@@ -21,7 +21,7 @@ services:
       MOODLE_DATABASE_PASSWORD: moodlepassword
       MOODLE_USERNAME: admin
       MOODLE_PASSWORD: adminpassword
-      MOODLE_EMAIL: admin@example.com
+      MOODLE_EMAIL: anton@td-aurora.ru
       MOODLE_SITE_NAME: My Moodle Site
     volumes:
       - moodle_data:/bitnami/moodle
